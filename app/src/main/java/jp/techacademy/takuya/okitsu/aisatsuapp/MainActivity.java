@@ -29,5 +29,27 @@ public class MainActivity extends AppCompatActivity {
 
         mTextView = (TextView) findViewById(R.id.textView);
     }
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.button1) {
+            showTimePickerDialog();
+        } else if (v.getId() == R.id.button2) {
 
+        }
+    }
+
+    public void showTimePickerDialog() {
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this,
+                new TimePickerDialog.OnTimeSetListener(){
+                    @Override
+                    public void onTimeSet(TimePicker view,int hourOfDay,int minute) {
+                        Log.d("UI-PARTS",String.valueOf(hourOfDay) + ":" +String.valueOf(minute));
+
+                    }
+                },
+            13,
+                0,
+                true);
+        timePickerDialog.show();
+    }
 }
