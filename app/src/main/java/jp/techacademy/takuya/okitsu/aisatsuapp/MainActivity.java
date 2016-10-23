@@ -14,6 +14,8 @@ import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
